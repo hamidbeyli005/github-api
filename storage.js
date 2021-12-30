@@ -21,6 +21,7 @@ class Storage {
         // indexof
         if (users.indexOf(username) === -1) {
             users.push(username);
+            // push ıslemı
 
         }
         localStorage.setItem("searched", JSON.stringify(users));
