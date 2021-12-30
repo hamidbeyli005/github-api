@@ -98,17 +98,34 @@ class UI {
 
     }
 
-    addSearchedUserToUI(username) {
+    addSearchedUserToUI(username, a) {
         let users = Storage.getSearchedUsersFromStorage();
         if (users.indexOf(username) === -1) {
             //  <li class="list-group-item">asdaskdjkasjkşdjşasjd</li> 
             const li = document.createElement("li");
+            const a = document.createElement("a");
+            const i = document.createElement("i");
+
             li.className = "list-group-item";
             li.textContent = username;
+            li.appendChild(a);
+
+            a.className = "delete-item";
+            a.href = "#";
+            a.appendChild(i);
+
+            i.className = "fa fa-remove";
 
             this.lastUsers.appendChild(li);
         };
 
+        /*     <li class="list-group-item d-flex justify-content-between">
+                               Todo 1
+                               <a href = "#" class ="delete-item">
+                                   <i class = "fa fa-remove"></i>
+                               </a>
+
+                           </li> */
 
     };
 
