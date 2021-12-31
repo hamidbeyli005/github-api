@@ -14,6 +14,7 @@ class Storage {
     };
 
 
+
     static addSearchedUserToStorage(username) {
         // Kullanıcı ekle
         let users = this.getSearchedUsersFromStorage();
@@ -26,6 +27,8 @@ class Storage {
         }
         localStorage.setItem("searched", JSON.stringify(users));
     };
+
+
 
     static clearAllSearchedFromStorage() {
         // tüm kullanıcıları silme işlemi
